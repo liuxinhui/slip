@@ -28,9 +28,9 @@
 		</div>
 		<script type="text/javascript" src="js/slip.min.js"></script>
 		<script type="text/javascript">
-			var container = document.getElementById('container');
-			var pages = document.querySelectorAll('.page');
-			var slip = Slip(container, 'y').webapp(pages);
+			Slip(document.getElementById('container'), 'x').webapp().end(function() {
+	  		if (this.page === 3) location.reload();
+			});
 		</script>
 	</body>
 

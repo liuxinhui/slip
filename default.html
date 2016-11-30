@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,initial-scale=1.0">
+		<title>首页</title>
+		<style>
+		*{padding: 0;margin: 0;}
+		/*框架*/
+		.swipe-wrap{
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+		}
+		.swipe{
+			position:absolute;
+			width:100%;
+		}
+		.page{
+			width: 100%;
+			overflow: hidden;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="swipe-wrap" id="container">
+			<article class="swipe">
+				<div class="page active">
+					1
+				</div>
+				<div class="page active">
+					2
+				</div>
+				
+			</article>
+		</div>
+		<script type="text/javascript" src="js/slip.min.js"></script>
+		<script type="text/javascript">
+			var container = document.getElementById('container');
+			var pages = document.querySelectorAll('.page');
+			var slip = Slip(container, 'y').webapp(pages);
+		</script>
+	</body>
+
+</html>
